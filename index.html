@@ -6,10 +6,44 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TRAINERS</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/media-queries.css">
+    <link rel="stylesheet" href="html//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="html//resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+
+            $( "#dialog" ).dialog({
+
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+
+            $( "#opener" ).on( "click", function() {
+                $( "#dialog" ).dialog( "open" );
+            });
+
+            $( "#dialog" ).dialog({minWidth:750});
+
+
+        } );
+
+    </script>
+
+
 </head>
 <body>
     <header>
@@ -76,6 +110,8 @@
         <div class="container d-flex border">
             <h1>OUR TRAINERS</h1>
         </div>
+        <img src="images/fon.png" alt="fon">
+
     </section>
     <section class="content"></section>
 <footer>
@@ -86,7 +122,7 @@
                 <label>
                     <input class="email" type="email" placeholder="enter email address" >
                 </label>
-            <button class="sub" type="submit">subscrible now</button>
+            <button id="opener" class="sub" type="button">subscrible now</button>
         </form>
     </div>
     <section>
@@ -176,6 +212,28 @@
 
 
 </footer>
+
+    <div id="dialog" title="FORGOT YOUR PASSWORD?">
+        <form action="" method="get">
+            <div class="enter_email">
+                <label class="label" for="email">ENTER YOUR EMAIL</label>
+                <input class="input" id="email" name="email" type="email" >
+            </div>
+            <div class="reset">
+                <button class="password" type="reset">RESET PASSWORD ?</button>
+
+                <p>or</p>
+
+                <button class="log" type="submit"><a href="#"><i class="fab fa-facebook-f"></i>Log In Using Facebook</a></button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
     <script src="https://kit.fontawesome.com/82d5ee9c92.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
