@@ -22,6 +22,30 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Now';
+    src: url('../fonts/Now-Bold.eot');
+    src: url('../fonts/Now-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Now-Bold.woff2') format('woff2'),
+    url('../fonts/Now-Bold.woff') format('woff'),
+    url('../fonts/Now-Bold.ttf') format('truetype'),
+    url('../fonts/Now-Bold.svg#Now-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Now';
+    src: url('../fonts/Now-Medium.eot');
+    src: url('../fonts/Now-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Now-Medium.woff2') format('woff2'),
+    url('../fonts/Now-Medium.woff') format('woff'),
+    url('../fonts/Now-Medium.ttf') format('truetype'),
+    url('../fonts/Now-Medium.svg#Now-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
 *{
     padding: 0;
     margin: 0;
@@ -29,6 +53,8 @@
 header{
     background-color: rgba(0,0,0,0.65);
     padding: 25px 0 12px;
+    position: fixed;
+    width: 100%;
 
 
 }
@@ -88,7 +114,7 @@ header form button{
     color: red;
 }
 .btn{
-    min-width: 170px;
+    min-width: 160px;
     height: 42px ;
     color: #ffffff;
     font-size: 15px;
@@ -166,13 +192,19 @@ header nav ul li:after{
     margin-left: 16px;
 }
 
-.fon{
-    background-image:url('../images/fon1.png');
-    background-size: cover;
-    padding: 67px 0 57px 0;
+
+.fon img{
+    display: block;
+    width: 100%;
 }
 
-h1{
+.fon .container.d-flex.border{
+    position: absolute;
+    width: 100%;
+    bottom: 300px;
+
+}
+.fon .container.d-flex.border h1{
     text-align: center;
     color: #ffffff;
     font-size: 51px;
@@ -180,11 +212,15 @@ h1{
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     margin-bottom: 34px;
+
 }
 
-section .container.d-flex.border{
+
+.fon .container.d-flex.border {
     border-bottom: 3px solid #ff0000;
+
 }
+
 .content{
     height:1280px ;
     background-color: white;
@@ -273,5 +309,93 @@ footer nav ul li a{
     text-decoration: none;
     line-height: 25px;
     font-family: 'Metropolis';
+
+}
+
+#dialog{
+    max-width: 750px;
+    margin: auto;
+    background-color: #fbfbfb;
+    padding-bottom: 160px;
+
+}
+
+
+
+.ui-dialog-title{
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.ui-dialog-titlebar{
+    padding: 40px 0;
+    background-color: #000000;
+    text-align: center;
+    font-family: 'Now';
+}
+.enter_email{
+    justify-content: space-between;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: 570px;
+    margin: auto;
+}
+.label{
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    font-family: 'Now';
+    color: #363636;
+}
+.input{
+    border-color: #b7b7b7;
+    border-radius: 5px;
+    width: 380px;
+    height: 58px ;
+    font-size: 22px;
+}
+.reset{
+    max-width: 528px;
+    margin: auto;
+    text-align: center;
+
+
+}
+.password{
+    border: none;
+    background-color:  #d4d4d4;
+    padding: 20px ;
+    width: 100%;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Now';
+
+}
+.reset p{
+    font-size: 22px;
+    color: #363636;
+    text-transform: uppercase;
+    margin: 29px 0;
+    font-family: 'Now';
+}
+.log{
+    width: 100%;
+    border: none;
+    background-color: #557bcd;
+    text-transform: uppercase;
+    padding: 20px ;
+
+}
+.log a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Now';
+}
+.log a i.fa-facebook-f:before{
+    font-size: 24px;
+    margin-right: 16px;
 
 }
